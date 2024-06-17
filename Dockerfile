@@ -1,9 +1,9 @@
 FROM python:3.11.9-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /app/YTUtility
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container at /app/YTUtility
 COPY . /app
 
 # Install the required dependencies
