@@ -48,4 +48,4 @@ def get_download(playlist_id, filename):
     return send_from_directory(f"{DOWNLOAD_FOLDER}/{playlist_id}", filename, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
