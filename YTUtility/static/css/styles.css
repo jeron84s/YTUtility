@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-group {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5em;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  input, select, button {
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 1.25em;
+  }
+  
+  input, select, button {
+    font-size: 0.85em;
+    padding: 0.5em;
+  }
+}
+/* Base styles */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Toggle switch styles */
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-switch__checkbox {
+  display: none;
+}
+
+.theme-switch__slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.theme-switch__slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.theme-switch__checkbox:checked + .theme-switch__slider {
+  background-color: #2196F3; /* Blue color for checked state */
+}
+
+.theme-switch__checkbox:checked + .theme-switch__slider:before {
+  transform: translateX(16px); /* Position switch to the right */
+}
+

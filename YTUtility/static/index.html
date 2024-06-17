@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download YouTube Videos</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Your existing header content -->
+        <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox">
+            <span class="theme-switch__slider"></span>
+        </label>
+    </header>
+    
+    <div class="container">
+        <h1>Download YouTube Videos</h1>
+        <form id="downloadForm">
+            <input type="text" id="url" placeholder="Enter YouTube Video or Playlist URL">
+            <div class="form-group">
+                <label for="format">Choose format:</label>
+                <select id="format">
+                    <option value="mp4">MP4</option>
+                    <option value="mp3">MP3</option>
+                </select>
+            </div>
+            <button type="submit">Download</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
